@@ -1,0 +1,168 @@
+.servico-container {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+  }
+  
+  /* Top Intro */
+  .service-intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .service-intro h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-intro p {
+    font-size: 30px;
+    color: #555;
+  }
+  
+  /* Grid Columns */
+  .service-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-column {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .service-column img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .service-column h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .service-column p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .service-column a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .service-column a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 900px) {
+    .service-columns {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .service-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Horizontal Featured Services */
+  .servico-destaque-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+  
+  .servico-destaque {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .servico-destaque.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .servico-texto {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .servico-categoria {
+    color: #1E73E8 !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .servico-titulo {
+    font-size: 2.5rem;
+    margin: 0 0 20px;
+  }
+  
+  .servico-texto p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .servico-imagem {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .servico-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Resize only Carpintaria image */
+  .servico-destaque.reverse .servico-imagem img {
+    max-width: 70%;
+  }
+  
+  /* Contact Button */
+  .contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #1E73E8;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .contact-button:hover {
+    background-color: #155ab6;
+  }
+  
+  @media (max-width: 768px) {
+    .servico-destaque,
+    .servico-destaque.reverse {
+      flex-direction: column;
+    }
+  }
+  

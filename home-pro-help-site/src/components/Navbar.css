@@ -1,0 +1,34 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #f8f9fa; /* Slightly different white for the navbar */
+    height: 150px;
+    font-family: "Kanit", sans-serif;
+  }
+  
+  .navbar-logo {
+    height: 180px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+  }
+  
+  /* Link styles */
+  .navbar-links a {
+    text-decoration: none;
+    color: #007bff; /* Default blue color */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .navbar-links a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  

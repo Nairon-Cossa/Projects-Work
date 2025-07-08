@@ -1,34 +1,87 @@
-/* Navbar Styles */
+/* Navbar base */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: #f8f9fa; /* Slightly different white for the navbar */
-    height: 150px;
-    font-family: "Kanit", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f8f9fa;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Kanit", sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; /* ✅ allows logo and links to wrap if needed */
+}
+
+/* Logo */
+.navbar-logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Desktop nav links */
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap; /* ✅ prevents link overflow on small screens */
+  gap: 16px;
+  font-size: 16px;
+  justify-content: flex-end;
+  max-width: 100%;
+  overflow-x: auto; /* ✅ scrolls if screen is too small */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #007bff;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap; /* ✅ keep links in one line */
+}
+
+.navbar-links a:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Hamburger icon (hidden by default) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/* ======= MOBILE ONLY STYLES ======= */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  
-  .navbar-logo {
-    height: 180px;
-  }
-  
+
   .navbar-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #f8f9fa;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .navbar-links.active {
     display: flex;
-    gap: 20px;
-    font-size: 18px;
-    font-family: "Kanit", sans-serif;
   }
-  
-  /* Link styles */
-  .navbar-links a {
-    text-decoration: none;
-    color: #007bff; /* Default blue color */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
-  }
-  
-  .navbar-links a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.1); /* Slight zoom effect */
-  }
-  
+}
